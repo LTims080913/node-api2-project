@@ -11,6 +11,7 @@ server.get('/', (req, res) => {
 })
 
 server.use('/api/posts', postsRouter)
+const post = process.env.PORT || 8000;
 
-server.listen(8000, () => console.log('\n == API is Running on localhost:8000 == \n'))
+server.listen(port, () => console.log(`\n == API is Running on localhost:${port} == \n`))
 
